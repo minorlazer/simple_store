@@ -26,7 +26,10 @@
   </tbody>
 </table>
 
-
+<p>Average Price: <%= number_to_currency(@average) %></p>
+<p>Maximum price: <%=  number_to_currency(@products.maximum("price")) %></p>
+<p>Num of Unique Products: <%=  @unique_products %></p>
+<p>Sum of Product Quantity: <%= @quantity_sum %></p>
 <br>
 
 <%= link_to 'New Product', new_product_path %>
